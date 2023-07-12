@@ -1,0 +1,19 @@
+{
+  "name": "b-x",
+  "version": "0.0.5",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "tsc",
+    "version": "npm run build && git add -A dist",
+    "postpublish": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "typescript": "^x.y.z"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  }
+}
